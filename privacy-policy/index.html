@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Receipt Vault | Xaviron Labs</title>
+  <meta name="description" content="Privacy Policy for Receipt Vault by Xaviron Labs (Abid Ali). Explains offline-first local storage, permissions, photo EXIF metadata, backups, and user privacy controls.">
+  <link rel="canonical" href="https://abidali46.github.io/receipt-vault-legal/privacy-policy/">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-row">
+        <a class="brand-title" href="../">
+          <strong>Receipt Vault</strong>
+          <span>Official Legal &amp; Privacy Hub — Xaviron Labs</span>
+        </a>
+        <span class="badge">Privacy Policy</span>
+      </div>
+      <nav class="site-nav" aria-label="Primary legal navigation">
+        <ul class="nav-list">
+          <li><a href="../">Overview</a></li>
+          <li><a href="./" aria-current="page">Privacy Policy</a></li>
+          <li><a href="../terms/">Terms of Use</a></li>
+          <li><a href="../eula/">EULA</a></li>
+          <li><a href="../open-source-licenses/">Open-Source Licences</a></li>
+          <li><a href="../data-and-backups/">Data &amp; Backups</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="main-container">
+    <article class="doc-card">
+      <h1>Privacy Policy — Receipt Vault</h1>
+
+      <div class="meta-box">
+        <dl>
+          <dt>Application Name</dt>
+          <dd>Receipt Vault (Version <code>1.0.0+1</code>)</dd>
+          <dt>Developer Brand</dt>
+          <dd>Xaviron Labs (Individual developer trade name; not a registered company)</dd>
+          <dt>Legal Owner / Data Controller</dt>
+          <dd>Abid Ali (Individual Developer — Google Play Trader)</dd>
+          <dt>Support Email</dt>
+          <dd><a href="mailto:abidali691069@gmail.com">abidali691069@gmail.com</a></dd>
+          <dt>Effective Date</dt>
+          <dd data-legal-date="effective">Pending initial release</dd>
+          <dt>Last Updated</dt>
+          <dd data-legal-date="updated">Pending initial release</dd>
+        </dl>
+      </div>
+
+      <h2>1. Plain-Language Overview</h2>
+      <p>Receipt Vault is built as an <strong>offline-first, local-storage mobile application</strong> for saving purchase receipts and tracking product warranties.</p>
+      <ul>
+        <li><strong>No developer servers or accounts:</strong> Receipt Vault requires no account or sign-in, and Abid Ali / Xaviron Labs operates no remote servers that collect your receipt data.</li>
+        <li><strong>No tracking SDKs or off-device transmission by the app:</strong> Release <code>1.0.0+1</code> contains no analytics SDKs, crash-reporting SDKs, advertising SDKs, or Firebase services, and the Android release manifest does not declare the <code>INTERNET</code> permission.</li>
+        <li><strong>User-controlled local storage:</strong> All receipts, notes, warranty dates, photos, preferences, exports, and backups remain on your device unless you manually save or share exported files elsewhere, or unless your operating system backs up app data under your device settings.</li>
+      </ul>
+
+      <h2>2. Data Processed Locally on Your Device</h2>
+
+      <h3>2.1 Receipt &amp; Warranty Records</h3>
+      <p>Stored inside the app's private SQLite database (<code>receipt_vault.sqlite</code>) in the application documents directory:</p>
+      <ul>
+        <li>Product name</li>
+        <li>Store or merchant name (optional)</li>
+        <li>Category (optional)</li>
+        <li>Purchase date</li>
+        <li>Total amount / price</li>
+        <li>Warranty duration in days (optional)</li>
+        <li>Notes (optional)</li>
+        <li>Local image file reference (optional) and record creation timestamp</li>
+      </ul>
+
+      <h3>2.2 Receipt Photos &amp; EXIF Metadata Notice</h3>
+      <p>When you attach a receipt photo using your camera or photo gallery, a resized/compressed image copy (up to <code>2048 &times; 2048</code>, JPEG quality <code>85</code>) is saved in the app's private <code>receipt_images/</code> directory.</p>
+      <div class="callout callout-warn">
+        <strong>Camera &amp; GPS EXIF Metadata Notice:</strong> On Android, the underlying system image resizer (<code>image_picker_android</code>) preserves source EXIF metadata tags—which may include <strong>camera make/model, capture timestamps, and GPS location coordinates</strong> if embedded in your original photo. Receipt Vault does not read, upload, or automatically strip EXIF metadata.
+      </div>
+
+      <h3>2.3 App Preferences</h3>
+      <p>Stored locally in <code>app_settings.json</code> inside the application documents directory: your selected theme mode (<code>system</code>, <code>light</code>, or <code>dark</code>) and warranty notification preference.</p>
+
+      <h3>2.4 Local Timezone &amp; Scheduled Notifications</h3>
+      <p>When reminders are enabled, Receipt Vault reads your device's local IANA timezone offline (via <code>flutter_timezone</code> and bundled <code>timezone</code> data) solely to schedule local notifications at <code>9:00 AM</code> local time (<code>30</code>, <code>7</code>, <code>3</code>, and <code>1</code> day prior to expiry, plus catch-up reminders where eligible).</p>
+      <p><strong>Lock-Screen Visibility Notice:</strong> Local notifications include the product name you entered and warranty expiration date, which may be visible on your lock screen depending on your Android/OS notification settings.</p>
+
+      <h2>3. Permissions &amp; OS Features Used</h2>
+      <ul>
+        <li><strong><code>POST_NOTIFICATIONS</code> (Android 13+):</strong> Displays opt-in local warranty reminders. Can be revoked anytime in system settings or turned off in app Settings.</li>
+        <li><strong><code>RECEIVE_BOOT_COMPLETED</code> (Android):</strong> Re-registers locally scheduled warranty alerts after your device restarts.</li>
+        <li><strong><code>VIBRATE</code> (Android):</strong> Vibration feedback for scheduled reminder alerts.</li>
+        <li><strong>System Camera &amp; Photo Picker:</strong> Receipt Vault declares <strong>no</strong> <code>CAMERA</code> or broad media/storage permissions (<code>READ_EXTERNAL_STORAGE</code>, <code>WRITE_EXTERNAL_STORAGE</code>, <code>READ_MEDIA_IMAGES</code>) in the Android release manifest. Images are obtained via explicit OS intents (<code>ImagePickerFileProvider</code> and, on older Android versions, Android's Google Play Services backported Photo Picker system component subject to Google/OS policies).</li>
+        <li><strong>Android Storage Access Framework (SAF):</strong> Launches system document pickers (<code>ACTION_CREATE_DOCUMENT</code> and <code>ACTION_OPEN_DOCUMENT</code>) when you choose to save a CSV, save a <code>.rvbackup</code> file, or pick a backup for restore. Temporary staging bytes in private app cache are deleted on completion, cancellation, or next startup.</li>
+      </ul>
+
+      <h2>4. User-Initiated Exports, Backups &amp; System Clipboard</h2>
+      <ul>
+        <li><strong>CSV Exports (<code>.csv</code>):</strong> Contain unencrypted text metadata only (photos are excluded; internal local paths are omitted). Once saved outside app storage, other apps with permission to that folder can read the file.</li>
+        <li><strong>System Clipboard (<code>Copy CSV</code> / <code>Copy Path</code>):</strong> Places plaintext receipt data or the saved file path onto your device's system clipboard when you tap Copy. Other apps or clipboard tools on your device may access clipboard content per your OS rules.</li>
+        <li><strong>Full Backups (<code>.rvbackup</code>):</strong> Self-contained ZIP archives holding receipts, settings, manifest checksums, and receipt photos (including preserved EXIF tags). <strong>Backups are unencrypted and not password-protected</strong>—store them securely. See <a href="../data-and-backups/">Data &amp; Backup Information</a>.</li>
+      </ul>
+
+      <h2>5. Device Backups, Security &amp; Retention</h2>
+      <ul>
+        <li><strong>Unencrypted Local Storage:</strong> Receipt Vault does not apply custom database or archive encryption; local confidentiality relies on OS app sandboxing, your device lock screen, and OS storage encryption.</li>
+        <li><strong>Android OS Backup Caveat:</strong> Depending on your Android device backup settings (such as Google Drive Device Backup), Android's OS-level Auto Backup may include application sandbox files unless disabled in your device settings or updated in a future app configuration.</li>
+        <li><strong>Google Play Store:</strong> App installation, updates, and aggregate Play Console statistics are handled by Google LLC under Google's Privacy Policy.</li>
+        <li><strong>Deletion &amp; Retention:</strong> You control retention directly. Deleting receipts deletes unreferenced photos and cancels their reminders. Uninstalling the app or clearing app storage removes all local sandbox data (but does not delete external <code>.csv</code> or <code>.rvbackup</code> files you saved elsewhere).</li>
+      </ul>
+
+      <h2>6. Children's Privacy</h2>
+      <p>Receipt Vault is a general personal-record utility and is not directed to children under 13 (or the relevant age of digital consent in your country). Because no personal data is collected or transmitted to developer servers, we do not knowingly collect children's personal data.</p>
+
+      <h2>7. Regional Rights &amp; Support Emails</h2>
+      <ul>
+        <li><strong>EEA / UK (GDPR / UK GDPR) &amp; US State Laws (e.g., CCPA/CPRA):</strong> Because all receipt data stays on your device, Xaviron Labs / Abid Ali neither sells nor shares personal information, and you may access, export (CSV / <code>.rvbackup</code>), modify, or delete all data directly on your device at any time.</li>
+        <li><strong>Email Support:</strong> If you email <a href="mailto:abidali691069@gmail.com">abidali691069@gmail.com</a> for help, your email address and message contents are used solely to reply to your inquiry and are retained only as long as reasonably required for support or legal compliance. You may request deletion of support correspondence anytime.</li>
+      </ul>
+
+      <h2>8. Future Paid Features &amp; Updates</h2>
+      <p>Receipt Vault <code>1.0.0+1</code> is currently free with no billing or ad SDKs. If optional paid/premium features are introduced in a future release, payments will be processed by Google Play Billing and this Privacy Policy will be updated prior to release.</p>
+
+      <h2>9. Contact</h2>
+      <p>Developer / Legal Owner: <strong>Abid Ali</strong> (<strong>Xaviron Labs</strong>)<br>
+      Support Email: <a href="mailto:abidali691069@gmail.com">abidali691069@gmail.com</a></p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong>Receipt Vault</strong> — Individual Developer Brand: <strong>Xaviron Labs</strong> (Owner: Abid Ali)</div>
+      <div class="footer-links">
+        <a href="../">Overview</a>
+        <a href="../terms/">Terms</a>
+        <a href="../eula/">EULA</a>
+        <a href="../open-source-licenses/">Open-Source Licences</a>
+        <a href="../data-and-backups/">Data &amp; Backups</a>
+        <a href="../contact/">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

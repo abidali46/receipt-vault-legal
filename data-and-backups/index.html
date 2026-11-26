@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data &amp; Backup Information — Receipt Vault | Xaviron Labs</title>
+  <meta name="description" content="Important user guidance about Receipt Vault local storage, unencrypted .rvbackup archives, destructive restore behavior, CSV exports, and warranty notification limits.">
+  <link rel="canonical" href="https://abidali46.github.io/receipt-vault-legal/data-and-backups/">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-row">
+        <a class="brand-title" href="../">
+          <strong>Receipt Vault</strong>
+          <span>Official Legal &amp; Privacy Hub — Xaviron Labs</span>
+        </a>
+        <span class="badge">Data &amp; Backups</span>
+      </div>
+      <nav class="site-nav" aria-label="Primary legal navigation">
+        <ul class="nav-list">
+          <li><a href="../">Overview</a></li>
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../terms/">Terms of Use</a></li>
+          <li><a href="../eula/">EULA</a></li>
+          <li><a href="../open-source-licenses/">Open-Source Licences</a></li>
+          <li><a href="./" aria-current="page">Data &amp; Backups</a></li>
+          <li><a href="../contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="main-container">
+    <article class="doc-card">
+      <h1>Data &amp; Backup Information — Receipt Vault</h1>
+      <div class="meta-box">
+        <dl>
+          <dt>Application</dt>
+          <dd>Receipt Vault (<code>1.0.0+1</code>)</dd>
+          <dt>Developer Brand / Owner</dt>
+          <dd>Xaviron Labs — Abid Ali (Individual Developer — Google Play Trader)</dd>
+          <dt>Support Email</dt>
+          <dd><a href="mailto:abidali691069@gmail.com">abidali691069@gmail.com</a></dd>
+          <dt>Effective Date</dt>
+          <dd data-legal-date="effective">Pending initial release</dd>
+          <dt>Last Updated</dt>
+          <dd data-legal-date="updated">Pending initial release</dd>
+        </dl>
+      </div>
+      <p>Because Receipt Vault operates entirely on your device without a developer cloud server, please review these important facts about backups, restores, exports, and reminders.</p>
+
+      <h2>1. Local-Only Storage &amp; Independent Copies</h2>
+      <p>All receipt data (<code>receipt_vault.sqlite</code>), photos (<code>receipt_images/</code>), and preferences (<code>app_settings.json</code>) reside solely on your device. Uninstalling the app, clearing app storage, losing your device, or factory resetting permanently removes in-app records unless you saved an external backup.</p>
+      <div class="callout callout-info">
+        <strong>Recommendation:</strong> Users should keep independent copies of important receipts (original paper invoices, merchant email confirmations, or verified backups stored safely) especially for high-value purchases.
+      </div>
+
+      <h2>2. Backup Files (<code>.rvbackup</code>) Contain Sensitive Information</h2>
+      <ul>
+        <li><strong>Unencrypted ZIP Format:</strong> Backup archives (<code>receipt_vault_backup_YYYY-MM-DD.rvbackup</code>) contain <code>manifest.json</code>, <code>database/receipts.json</code>, <code>settings/settings.json</code>, and your <code>images/*</code> receipt photos.</li>
+        <li><strong>Sensitive Contents:</strong> Backup files are <strong>not encrypted or password-protected</strong> by Receipt Vault and may contain store names, purchase prices, personal notes, and photos carrying original EXIF/GPS metadata. Anyone with access to the file can read it—store backups in a trusted location.</li>
+        <li><strong>Missing Source Photos:</strong> If any photo file was already missing on disk during backup export, Receipt Vault skips that missing file rather than failing the whole backup and lists it in <code>manifest.json</code> (<code>missingPhotos</code>).</li>
+      </ul>
+
+      <h2>3. Restoring a Backup Replaces Existing Data</h2>
+      <p>Before changing your database, Receipt Vault validates the archive structure, manifest, JSON fields, image links, and CRC-32 checksums, then displays the backup summary and asks for explicit confirmation.</p>
+      <div class="callout callout-warn">
+        <strong>Overwrite Warning:</strong> Confirming restore <strong>replaces all current in-app receipts, photos, and settings</strong> with the contents of the selected backup archive. Receipts added after that backup date will be lost unless backed up first.
+      </div>
+
+      <h2>4. CSV Exports &amp; Clipboard Exposure</h2>
+      <ul>
+        <li><strong>Metadata Only:</strong> CSV exports omit photo files (exporting <code>Has Photo: Yes/No</code> instead) and cannot restore photos into Receipt Vault. Use <code>.rvbackup</code> for complete backups.</li>
+        <li><strong>Clipboard Caution:</strong> Using <em>Copy CSV</em> or <em>Copy Path</em> places plaintext text onto your device's system clipboard, which may be readable by other apps on your device.</li>
+      </ul>
+
+      <h2>5. Warranty Tracking &amp; Notification Delivery Limits</h2>
+      <ul>
+        <li><strong>Informational Only:</strong> Warranty tracking and countdowns are based strictly on entered dates and do not guarantee a valid warranty claim with any merchant or manufacturer.</li>
+        <li><strong>Android Settings Impact:</strong> Local reminder delivery uses battery-friendly OS scheduling (<code>inexactAllowWhileIdle</code>) and may be delayed or prevented by Android Doze mode, manufacturer battery savers, revoked permissions, or device clock/timezone changes.</li>
+      </ul>
+
+      <h2>6. Support</h2>
+      <p>Questions about backup validation or restoring records? Email <a href="mailto:abidali691069@gmail.com">abidali691069@gmail.com</a> (Abid Ali / Xaviron Labs).</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong>Receipt Vault</strong> — Individual Developer Brand: <strong>Xaviron Labs</strong> (Owner: Abid Ali)</div>
+      <div class="footer-links">
+        <a href="../">Overview</a>
+        <a href="../privacy-policy/">Privacy Policy</a>
+        <a href="../terms/">Terms</a>
+        <a href="../eula/">EULA</a>
+        <a href="../open-source-licenses/">Open-Source Licences</a>
+        <a href="../contact/">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
