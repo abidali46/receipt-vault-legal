@@ -40,18 +40,20 @@
 
       <div class="meta-box">
         <dl>
+          <dt>Effective Date</dt>
+          <dd>November 26, 2026 <em>(upon initial <code>1.0.0+1</code> store publication)</em></dd>
+          <dt>Last Updated</dt>
+          <dd>November 26, 2026</dd>
           <dt>Application Name</dt>
-          <dd>Receipt Vault (Version <code>1.0.0+1</code>)</dd>
+          <dd>Receipt Vault (<code>com.xavironlabs.receiptvault</code>, Version <code>1.0.0+1</code>)</dd>
           <dt>Developer Brand</dt>
           <dd>Xaviron Labs (Individual developer trade name; not a registered company)</dd>
           <dt>Legal Owner / Data Controller</dt>
-          <dd>Abid Ali (Individual Developer — Google Play Trader)</dd>
+          <dd>Abid Ali (Individual Developer — Google Play Trader Account)</dd>
           <dt>Support Email</dt>
           <dd><a href="mailto:abidali691069@gmail.com">abidali691069@gmail.com</a></dd>
-          <dt>Effective Date</dt>
-          <dd data-legal-date="effective">Pending initial release</dd>
-          <dt>Last Updated</dt>
-          <dd data-legal-date="updated">Pending initial release</dd>
+          <dt>Document Status</dt>
+          <dd>Release Candidate Policy (<code>1.0.0+1</code>). Qualified legal counsel review is recommended before commercial publication. Verified Google Play Trader contact disclosures are supplied directly inside Google Play Console.</dd>
         </dl>
       </div>
 
@@ -60,7 +62,7 @@
       <ul>
         <li><strong>No developer servers or accounts:</strong> Receipt Vault requires no account or sign-in, and Abid Ali / Xaviron Labs operates no remote servers that collect your receipt data.</li>
         <li><strong>No tracking SDKs or off-device transmission by the app:</strong> Release <code>1.0.0+1</code> contains no analytics SDKs, crash-reporting SDKs, advertising SDKs, or Firebase services, and the Android release manifest does not declare the <code>INTERNET</code> permission.</li>
-        <li><strong>User-controlled local storage:</strong> All receipts, notes, warranty dates, photos, preferences, exports, and backups remain on your device unless you manually save or share exported files elsewhere, or unless your operating system backs up app data under your device settings.</li>
+        <li><strong>User-controlled local storage:</strong> All receipts, notes, warranty dates, photos, preferences, exports, and backups remain on your device unless you explicitly choose to export, copy, or save files to another location or app (or email support). On Android, Receipt Vault disables Android Auto Backup and OS device transfer (Section 5); rooted environments, custom OEM tools, or other platforms remain subject to OS settings.</li>
       </ul>
 
       <h2>2. Data Processed Locally on Your Device</h2>
@@ -89,7 +91,7 @@
 
       <h3>2.4 Local Timezone &amp; Scheduled Notifications</h3>
       <p>When reminders are enabled, Receipt Vault reads your device's local IANA timezone offline (via <code>flutter_timezone</code> and bundled <code>timezone</code> data) solely to schedule local notifications at <code>9:00 AM</code> local time (<code>30</code>, <code>7</code>, <code>3</code>, and <code>1</code> day prior to expiry, plus catch-up reminders where eligible).</p>
-      <p><strong>Lock-Screen Visibility Notice:</strong> Local notifications include the product name you entered and warranty expiration date, which may be visible on your lock screen depending on your Android/OS notification settings.</p>
+      <p><strong>Lock-Screen Visibility Notice:</strong> Local notifications include the product name you entered and warranty expiration date. On Android, notifications use <code>NotificationVisibility.private</code> to conceal sensitive receipt details on locked screens where supported by your OS lock-screen settings.</p>
 
       <h2>3. Permissions &amp; OS Features Used</h2>
       <ul>
@@ -110,7 +112,7 @@
       <h2>5. Device Backups, Security &amp; Retention</h2>
       <ul>
         <li><strong>Unencrypted Local Storage:</strong> Receipt Vault does not apply custom database or archive encryption; local confidentiality relies on OS app sandboxing, your device lock screen, and OS storage encryption.</li>
-        <li><strong>Android OS Backup Caveat:</strong> Depending on your Android device backup settings (such as Google Drive Device Backup), Android's OS-level Auto Backup may include application sandbox files unless disabled in your device settings or updated in a future app configuration.</li>
+        <li><strong>Android OS Backup Disabled:</strong> Receipt Vault configures <code>android:allowBackup=&quot;false&quot;</code>, <code>backup_rules.xml</code>, and <code>data_extraction_rules.xml</code> so Android Auto Backup and OS device-transfer backup exclude local receipt records, photos, and settings.</li>
         <li><strong>Google Play Store:</strong> App installation, updates, and aggregate Play Console statistics are handled by Google LLC under Google's Privacy Policy.</li>
         <li><strong>Deletion &amp; Retention:</strong> You control retention directly. Deleting receipts deletes unreferenced photos and cancels their reminders. Uninstalling the app or clearing app storage removes all local sandbox data (but does not delete external <code>.csv</code> or <code>.rvbackup</code> files you saved elsewhere).</li>
       </ul>

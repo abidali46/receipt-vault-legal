@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -45,22 +45,18 @@
           <dd>Abid Ali (<strong>Xaviron Labs</strong>, Individual Developer — Google Play Trader)</dd>
           <dt>Support Email</dt>
           <dd><a href="mailto:abidali691069@gmail.com">abidali691069@gmail.com</a></dd>
-          <dt>Effective Date</dt>
-          <dd data-legal-date="effective">Pending initial release</dd>
-          <dt>Last Updated</dt>
-          <dd data-legal-date="updated">Pending initial release</dd>
         </dl>
       </div>
       <p>This page lists all third-party Dart/Flutter packages, native libraries, icon fonts, shaders, Flutter Engine dependencies, and Android Gradle libraries verified in Receipt Vault.</p>
 <p><strong>Legal Owner / Publisher:</strong> Abid Ali (operating as <strong>Xaviron Labs</strong>, Individual Developer — Google Play Trader)</p>
 <h2>1. Licensing Overview &amp; Scope</h2>
 <ul>
-<li><strong>In-App &amp; Web Notices:</strong> Flutter builds bundle third-party Dart/Flutter and Flutter Engine notices in <code>NOTICES.Z</code> (viewable inside Receipt Vault under <em>Settings &rarr; About &amp; Legal &rarr; Open Source Licences</em>), supplemented with explicit attributions here and in-app for Material Icons, Android Core Library Desugaring, and Android/Jetpack dependencies.</li>
-<li><strong>Material Icons Font (<code>CC BY 4.0</code>):</strong> <code>fonts/MaterialIcons-Regular.otf</code> is licensed by Google LLC under Creative Commons Attribution 4.0 International (<code>CC BY 4.0</code>); attribution, warranty notice, and license links are provided in Section 8.6.</li>
-<li><strong>Android Core Library Desugaring (<code>GPL-2.0 with Classpath Exception</code>):</strong> Android builds link <code>com.android.tools:desugar_jdk_libs:2.1.4</code> (GNU GPL v2 with Classpath Exception) and <code>com.android.tools:desugar_jdk_libs_configuration:2.1.4</code> (BSD-3-Clause). The Classpath Exception permits combining the library with Receipt Vault without subjecting independent application modules to copyleft. The verbatim GNU GPL v2 + Classpath Exception license text is reproduced in Section 8.7.</li>
-<li><strong>SQLite Native Binary (<code>libsqlite3.so</code> — Public Domain):</strong> Bundled SQLite C binaries (derived from SQLite <code>3.50.2</code> via <code>sqlite3</code> <code>3.5.2</code>) are dedicated to the Public Domain (Section 8.1); the Dart wrapper and <code>sqlite3_flutter_libs</code> shim are MIT licensed.</li>
-<li><strong>Android Runtime &amp; Build Dependencies (<code>Apache-2.0</code>):</strong> All resolved Android Jetpack (<code>androidx.*</code>), JetBrains Kotlin (<code>kotlin-stdlib:2.3.20</code>), Kotlinx Coroutines (<code>1.9.0</code>), JetBrains Annotations (<code>23.0.0</code>), KeepSafe ReLinker (<code>1.4.5</code>), Guava ListenableFuture (<code>1.0</code> via <code>guava-parent:26.0-android</code>), Google Gson (<code>2.12.0</code>), Error Prone Annotations (<code>2.36.0</code>), and JSpecify (<code>1.0.0</code>) libraries are verified against their authoritative Google Maven and Maven Central POM metadata under the <strong>Apache License, Version 2.0</strong> (reproduced in full in Section 8.5).</li>
-<li><strong>Platform Scope of Transitive Dependencies:</strong> Multi-platform plugin dependencies resolved in <code>pubspec.lock</code> include Linux desktop dependencies (such as <code>dbus</code> <code>0.8.0</code> under MPL-2.0 via <code>flutter_local_notifications_linux</code>) that are excluded from Android APK/AAB binaries.</li>
+<li><strong>In-App &amp; Web Notices:</strong> Flutter builds bundle third-party package notices in <code>NOTICES.Z</code> (accessible inside Receipt Vault via <em>Settings &rarr; About &amp; Legal &rarr; Open Source Licences</em>), supplemented with explicit attributions here and in-app for Material Icons (<code>CC BY 4.0</code>), Android Core Library Desugaring (verbatim GPL-2.0 + Classpath Exception and R8 BSD-3-Clause), full Apache License 2.0 text, and <code>archive</code> multi-license <code>bzip2</code>/<code>Zlib</code> codec notices.</li>
+<li><strong>Material Icons Font (<code>CC BY 4.0</code>):</strong> <code>fonts/MaterialIcons-Regular.otf</code> is licensed by Google LLC under Creative Commons Attribution 4.0 International (<code>CC BY 4.0</code>).</li>
+<li><strong>Android Core Library Desugaring (<code>GPL-2.0 with Classpath Exception</code>):</strong> Bundled with <code>com.android.tools:desugar_jdk_libs:2.1.4</code> (full verbatim license text in Section 7.7) and <code>desugar_jdk_libs_configuration:2.1.4</code> (embedded <code>LICENSE</code>: R8 BSD-3-Clause).</li>
+<li><strong>SQLite Native Binary (<code>libsqlite3.so</code> — Public Domain):</strong> Derived from SQLite amalgamation <code>3.50.2</code> (Section 7.1); Dart wrappers are MIT licensed.</li>
+<li><strong>Android Runtime Dependencies (<code>Apache-2.0</code>):</strong> Resolved AndroidX, Kotlin (<code>kotlin-stdlib:2.3.20</code>), Kotlinx Coroutines (<code>1.9.0</code>), JetBrains Annotations (<code>23.0.0</code>), ReLinker (<code>1.4.5</code>), Guava ListenableFuture (<code>1.0</code>), Gson (<code>2.12.0</code>), Error Prone Annotations (<code>2.36.0</code>), and JSpecify (<code>1.0.0</code>) libraries are documented under the Apache License, Version 2.0 (full license text in Section 7.5 and <code>OpenSourceLicenseRegistry</code>).</li>
+<li><strong>Linux-Only Transitive (<code>dbus</code> — <code>MPL-2.0</code>):</strong> Linux desktop only; excluded from Android APK/AAB binaries.</li>
 </ul>
 <h2>2. Direct Runtime Dart &amp; Flutter Dependencies (<code>pubspec.yaml</code> -&gt; <code>dependencies:</code>)</h2>
 <div class="table-wrap"><table><thead>
@@ -223,75 +219,48 @@
 <tr><td><code>web_socket_channel</code></td><td><code>3.0.3</code></td><td>BSD-3-Clause</td><td>Transitive dev</td></tr>
 <tr><td><code>yaml_edit</code></td><td><code>2.2.4</code></td><td>BSD-3-Clause</td><td>Transitive dev</td></tr>
 </tbody></table></div>
-<p><em>(Total Pub packages verified across <code>pubspec.lock</code>: 14 direct runtime + 87 transitive <code>--no-dev</code> [56 core/mobile/build-hook + 31 desktop/web/iOS/test-graph] + 36 dev/codegen-only = <strong>137 third-party packages</strong>, plus <code>receipt_vault</code> itself.)</em></p>
-<h2>5. Android Release Gradle Dependencies (<code>releaseRuntimeClasspath</code>)</h2>
-<p>All resolved Android release runtime artifacts verified directly against local Gradle cache metadata, Google Maven (<code>dl.google.com/dl/android/maven2</code>), and Maven Central (<code>repo1.maven.org</code>):</p>
+<p><em>(Total Pub packages verified across <code>the verified dependency lockfile</code>: 14 direct runtime + 87 transitive <code>--no-dev</code> [56 core/mobile/build-hook + 31 desktop/web/iOS/test-graph] + 36 dev/codegen-only = <strong>137 third-party packages</strong>, plus <code>receipt_vault</code> itself.)</em></p>
+<h2>5. Android Release Gradle Dependencies (<code>:app:dependencies --configuration releaseRuntimeClasspath</code>)</h2>
 <div class="table-wrap"><table><thead>
-<tr><th>Group : Artifact : Version</th><th>Licence</th><th>Verification Source</th><th>Copyright / Upstream Attribution &amp; Notes</th></tr>
+<tr><th>Group : Artifact : Version</th><th>License (Verified Locally)</th><th>Verification Source</th><th>Notes</th></tr>
 </thead><tbody>
-<tr><td><code>com.android.tools:desugar_jdk_libs:2.1.4</code></td><td><strong>GNU GPL v2 with Classpath Exception</strong></td><td>Resolved Gradle <code>.pom</code> &amp; upstream repository <code>LICENSE</code></td><td>OpenJDK / Google D8 desugaring subset; full verbatim license text reproduced in Section 8.7</td></tr>
-<tr><td><code>com.android.tools:desugar_jdk_libs_configuration:2.1.4</code></td><td><strong>BSD-3-Clause</strong></td><td>Resolved Gradle <code>.pom</code> &amp; embedded <code>LICENSE</code></td><td>Copyright (c) 2016, the R8 project authors</td></tr>
-<tr><td><code>com.google.code.gson:gson:2.12.0</code></td><td><strong>Apache-2.0</strong></td><td>Maven Central <code>.pom</code> &amp; JAR <code>pom.xml</code></td><td>Copyright 2008 Google LLC; transitive via <code>flutter_local_notifications</code></td></tr>
-<tr><td><code>com.google.errorprone:error_prone_annotations:2.36.0</code></td><td><strong>Apache-2.0</strong></td><td>Maven Central <code>.pom</code></td><td>Copyright 2015 The Error Prone Authors / Google LLC</td></tr>
-<tr><td><code>com.google.guava:listenablefuture:1.0</code></td><td><strong>Apache-2.0</strong></td><td>Maven Central <code>listenablefuture-1.0.pom</code> &amp; parent <code>guava-parent:26.0-android</code> POM</td><td>The Guava Authors / Google LLC</td></tr>
-<tr><td><code>org.jspecify:jspecify:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>JAR <code>META-INF/MANIFEST.MF</code> (<code>Bundle-License</code>) &amp; Maven Central</td><td>The JSpecify Authors</td></tr>
-<tr><td><code>org.jetbrains.kotlin:kotlin-stdlib:2.3.20</code></td><td><strong>Apache-2.0</strong></td><td>Maven Central <code>kotlin-stdlib-2.3.20.pom</code> &amp; JetBrains <code>NOTICE.txt</code></td><td>Copyright 2010–2024 JetBrains s.r.o. and Kotlin Team contributors</td></tr>
-<tr><td><code>org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0</code>, <code>kotlinx-coroutines-core:1.9.0</code>, <code>kotlinx-coroutines-core-jvm:1.9.0</code>, <code>kotlinx-coroutines-bom:1.9.0</code></td><td><strong>Apache-2.0</strong></td><td>Maven Central POMs &amp; upstream <code>LICENSE.txt</code></td><td>JetBrains s.r.o. / Kotlinx Coroutines Team</td></tr>
-<tr><td><code>org.jetbrains:annotations:23.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Maven Central <code>annotations-23.0.0.pom</code> &amp; upstream <code>LICENSE.txt</code></td><td>JetBrains s.r.o. / JetBrains Team</td></tr>
-<tr><td><code>com.getkeepsafe.relinker:relinker:1.4.5</code></td><td><strong>Apache-2.0</strong></td><td>Maven Central <code>relinker-1.4.5.pom</code> &amp; upstream <code>LICENSE</code></td><td>KeepSafe Software, Inc.</td></tr>
-<tr><td><code>androidx.activity:activity:1.13.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code> &amp; AAR <code>LICENSE.txt</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.annotation:annotation-jvm:1.10.0</code>, <code>annotation:1.10.0</code>, <code>annotation-experimental:1.4.1</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven POMs &amp; JAR <code>LICENSE.txt</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.arch.core:core-common:2.2.0</code>, <code>core-runtime:2.2.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven POMs</td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.collection:collection:1.4.2</code>, <code>collection-jvm:1.4.2</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven POMs</td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.compose.runtime:runtime-annotation:1.9.0</code>, <code>runtime-annotation-android:1.9.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven POMs &amp; AAR <code>LICENSE.txt</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.concurrent:concurrent-futures:1.1.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.core:core:1.18.0</code>, <code>core-ktx:1.18.0</code>, <code>core-viewtree:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven POMs &amp; AAR <code>LICENSE.txt</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.customview:customview:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.exifinterface:exifinterface:1.4.2</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code> &amp; AAR <code>LICENSE.txt</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.fragment:fragment:1.7.1</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.interpolator:interpolator:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.lifecycle:lifecycle-common:2.7.0</code>, <code>lifecycle-common-java8:2.7.0</code>, <code>lifecycle-livedata:2.7.0</code>, <code>lifecycle-livedata-core:2.7.0</code>, <code>lifecycle-livedata-core-ktx:2.7.0</code>, <code>lifecycle-process:2.7.0</code>, <code>lifecycle-runtime:2.7.0</code>, <code>lifecycle-viewmodel:2.7.0</code>, <code>lifecycle-viewmodel-savedstate:2.7.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven POMs</td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.loader:loader:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.media:media:1.1.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.navigationevent:navigationevent:1.0.0</code>, <code>navigationevent-android:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven POMs &amp; AAR <code>LICENSE.txt</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.profileinstaller:profileinstaller:1.4.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code> &amp; AAR <code>LICENSE.txt</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.savedstate:savedstate:1.2.1</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.startup:startup-runtime:1.1.1</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.tracing:tracing:1.2.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.versionedparcelable:versionedparcelable:1.1.1</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.viewpager:viewpager:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>.pom</code></td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>androidx.window:window:1.2.0</code>, <code>window-java:1.2.0</code>, <code>androidx.window.extensions.core:core:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven POMs</td><td>The Android Open Source Project (AOSP)</td></tr>
-<tr><td><code>io.flutter:flutter_embedding_release</code>, <code>arm64_v8a_release</code>, <code>armeabi_v7a_release</code>, <code>x86_64_release</code> (<code>1.0.0-4c525dac5ebe5971c5708ef73558ed8edcf4a362</code>)</td><td><strong>BSD-3-Clause</strong> + Flutter Engine notices (<code>NOTICES.Z</code>)</td><td>Flutter SDK <code>LICENSE</code> &amp; <code>sky_engine</code></td><td>The Flutter Authors; bundled notices in <code>NOTICES.Z</code></td></tr>
+<tr><td><code>com.android.tools:desugar_jdk_libs:2.1.4</code></td><td><strong>GNU GPL v2 with Classpath Exception</strong></td><td>Upstream Google Maven / GitHub <code>LICENSE</code> declaration</td><td>Full verbatim GNU GPL v2 + Classpath Exception text bundled in Section 7.7 and in-app <code>OpenSourceLicenseRegistry</code>.</td></tr>
+<tr><td><code>com.android.tools:desugar_jdk_libs_configuration:2.1.4</code></td><td><strong>BSD-3-Clause</strong></td><td>Embedded <code>LICENSE</code> in cached <code>.jar</code></td><td>Copyright (c) 2016, the R8 project authors; full notice bundled in <code>OpenSourceLicenseRegistry</code>.</td></tr>
+<tr><td><code>com.google.code.gson:gson:2.12.0</code></td><td><strong>Apache-2.0</strong></td><td>Cached JAR <code>META-INF/MANIFEST.MF</code> (<code>Bundle-License</code>) &amp; Maven Central POM</td><td>Google Gson Project; transitive via <code>flutter_local_notifications</code>.</td></tr>
+<tr><td><code>com.google.errorprone:error_prone_annotations:2.36.0</code></td><td><strong>Apache-2.0</strong></td><td>Upstream Maven Central POM</td><td>Error Prone Authors / Google.</td></tr>
+<tr><td><code>org.jspecify:jspecify:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Cached JAR <code>META-INF/MANIFEST.MF</code> (<code>Bundle-License</code>)</td><td>The JSpecify Authors.</td></tr>
+<tr><td><code>androidx.activity:activity:1.13.0</code></td><td><strong>Apache-2.0</strong></td><td>Embedded <code>META-INF/androidx/activity/activity/LICENSE.txt</code> in <code>.aar</code></td><td>Android Open Source Project (AOSP).</td></tr>
+<tr><td><code>androidx.media:media:1.1.0</code></td><td><strong>Apache-2.0</strong></td><td>Upstream Google Maven AOSP POM</td><td>AOSP.</td></tr>
+<tr><td><code>androidx.navigationevent:navigationevent:1.0.0</code>, <code>navigationevent-android:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Embedded <code>META-INF/androidx/navigationevent/navigationevent/LICENSE.txt</code> in <code>.aar</code></td><td>AOSP.</td></tr>
+<tr><td><code>androidx.annotation:annotation-jvm:1.10.0</code> <em>(plus <code>annotation:1.10.0</code> parent)</em></td><td><strong>Apache-2.0</strong></td><td>Embedded <code>META-INF/androidx/annotation/annotation/LICENSE.txt</code> in <code>.jar</code></td><td>AOSP.</td></tr>
+<tr><td><code>androidx.compose.runtime:runtime-annotation-android:1.9.0</code> <em>(plus <code>runtime-annotation:1.9.0</code> parent)</em></td><td><strong>Apache-2.0</strong></td><td>Embedded <code>META-INF/androidx/compose/runtime/runtime-annotation/LICENSE.txt</code> in <code>.aar</code></td><td>AOSP.</td></tr>
+<tr><td><code>androidx.core:core:1.18.0</code>, <code>core-ktx:1.18.0</code>, <code>core-viewtree:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Embedded <code>META-INF/androidx/core/*/LICENSE.txt</code> in <code>.aar</code></td><td>AOSP.</td></tr>
+<tr><td><code>androidx.exifinterface:exifinterface:1.4.2</code></td><td><strong>Apache-2.0</strong></td><td>Embedded <code>META-INF/androidx/exifinterface/exifinterface/LICENSE.txt</code> in <code>.aar</code></td><td>AOSP (used by <code>image_picker_android</code>).</td></tr>
+<tr><td><code>androidx.profileinstaller:profileinstaller:1.4.0</code></td><td><strong>Apache-2.0</strong></td><td>Embedded <code>META-INF/androidx/profileinstaller/profileinstaller/LICENSE.txt</code> in <code>.aar</code></td><td>AOSP.</td></tr>
+<tr><td><code>androidx.annotation:annotation-experimental:1.4.1</code>, <code>androidx.arch.core:core-common:2.2.0</code>, <code>core-runtime:2.2.0</code>, <code>androidx.collection:collection-jvm:1.4.2</code>, <code>androidx.concurrent:concurrent-futures:1.1.0</code>, <code>androidx.customview:customview:1.0.0</code>, <code>androidx.fragment:fragment:1.7.1</code>, <code>androidx.interpolator:interpolator:1.0.0</code>, <code>androidx.lifecycle:*:2.7.0</code>, <code>androidx.loader:loader:1.0.0</code>, <code>androidx.savedstate:savedstate:1.2.1</code>, <code>androidx.startup:startup-runtime:1.1.1</code>, <code>androidx.tracing:tracing:1.2.0</code>, <code>androidx.versionedparcelable:versionedparcelable:1.1.1</code>, <code>androidx.viewpager:viewpager:1.0.0</code>, <code>androidx.window:window:1.2.0</code>, <code>window-java:1.2.0</code>, <code>androidx.window.extensions.core:core:1.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven (<code>maven.google.com</code>) AOSP POMs &amp; cached <code>1.1.0</code>/<code>2.0.0</code> <code>.pom</code> constraints</td><td>The Android Open Source Project (AOSP).</td></tr>
+<tr><td><code>io.flutter:flutter_embedding_release</code>, <code>arm64_v8a_release</code>, <code>armeabi_v7a_release</code>, <code>x86_64_release</code> (<code>1.0.0-4c525dac5ebe5971c5708ef73558ed8edcf4a362</code>)</td><td><strong>BSD-3-Clause</strong> + Flutter Engine notices (<code>NOTICES.Z</code>)</td><td>Local Flutter SDK (<code>LICENSE</code> &amp; <code>sky_engine</code>)</td><td>Android embedding &amp; <code>libflutter.so</code> ABIs.</td></tr>
+<tr><td><code>org.jetbrains.kotlin:kotlin-stdlib:2.3.20</code></td><td><strong>Apache-2.0</strong></td><td>Cached <code>MANIFEST.MF</code> (<code>Implementation-Vendor: JetBrains</code>) &amp; upstream Maven Central POM</td><td>JetBrains s.r.o. and Kotlin Team contributors.</td></tr>
+<tr><td><code>org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0</code></td><td><strong>Apache-2.0</strong></td><td>Upstream Maven Central POM &amp; <code>LICENSE.txt</code></td><td>JetBrains s.r.o. / Kotlinx Coroutines Team.</td></tr>
+<tr><td><code>org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.0</code> (<code>+ core, bom</code>)</td><td><strong>Apache-2.0</strong></td><td>Upstream Maven Central POM &amp; <code>LICENSE.txt</code></td><td>JetBrains s.r.o. / Kotlinx Coroutines Team.</td></tr>
+<tr><td><code>org.jetbrains:annotations:23.0.0</code></td><td><strong>Apache-2.0</strong></td><td>Upstream Maven Central POM &amp; <code>LICENSE.txt</code></td><td>JetBrains s.r.o. / JetBrains Team.</td></tr>
+<tr><td><code>com.getkeepsafe.relinker:relinker:1.4.5</code></td><td><strong>Apache-2.0</strong></td><td>Upstream Maven Central POM &amp; <code>LICENSE</code></td><td>KeepSafe Software, Inc.</td></tr>
+<tr><td><code>com.google.guava:listenablefuture:1.0</code></td><td><strong>Apache-2.0</strong></td><td>Upstream Maven Central POM (<code>guava-parent</code>)</td><td>The Guava Authors / Google LLC.</td></tr>
 </tbody></table></div>
-
-<h2>6. Android Build &amp; Gradle Plugin Dependencies (Build-Time Only)</h2>
-<p><em>Used solely to compile Android builds and not packaged into released application binaries unless noted as runtime dependencies above:</em></p>
+<h2>6. Bundled Fonts, Icons, Shaders &amp; Native Shared Libraries</h2>
+<p>Inspected from <code>build/app/intermediates/flutter/release/flutter_assets/</code> and <code>build/app/intermediates/merged_native_libs/release/</code>:</p>
 <div class="table-wrap"><table><thead>
-<tr><th>Plugin / Build Tool</th><th>Version</th><th>Licence</th><th>Verification Source &amp; Holder</th></tr>
+<tr><th>Component / Asset</th><th>Format / ABIs</th><th>License</th><th>Attribution / Action Required</th></tr>
 </thead><tbody>
-<tr><td><code>com.android.tools.build:gradle</code> (Android Gradle Plugin)</td><td><code>9.0.1</code></td><td><strong>Apache-2.0</strong></td><td>Google Maven <code>gradle-9.0.1.pom</code> — The Android Open Source Project</td></tr>
-<tr><td><code>org.jetbrains.kotlin:kotlin-gradle-plugin</code> (Kotlin Android Plugin)</td><td><code>2.3.20</code></td><td><strong>Apache-2.0</strong></td><td>Maven Central <code>kotlin-gradle-plugin-2.3.20.pom</code> — JetBrains s.r.o. / Kotlin Team</td></tr>
-<tr><td><code>dev.flutter.flutter-plugin-loader</code> / <code>dev.flutter.flutter-gradle-plugin</code></td><td><code>1.0.0</code> (Flutter SDK)</td><td><strong>BSD-3-Clause</strong></td><td>Flutter SDK <code>LICENSE</code> — The Flutter Authors</td></tr>
-<tr><td>Gradle Wrapper / Build Tool</td><td><code>9.1.0</code></td><td><strong>Apache-2.0</strong></td><td>Gradle <code>v9.1.0</code> <code>LICENSE</code> — Gradle Inc.</td></tr>
+<tr><td><code>fonts/MaterialIcons-Regular.otf</code></td><td>Font asset (via <code>uses-material-design: true</code>)</td><td><strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong> (<code>Flutter SDK material_fonts/materialicons_license.txt</code>)</td><td>Retain creator/copyright attribution, refer to CC BY 4.0 license &amp; warranty disclaimer, and provide license URI/text. Add explicitly to in-app notices because Flutter's <code>NOTICES.Z</code> omits it.</td></tr>
+<tr><td><code>packages/cupertino_icons/assets/CupertinoIcons.ttf</code></td><td>Font asset</td><td><strong>MIT License</strong> (Copyright (c) 2016 Vladimir Kharlampidi)</td><td>Covered by <code>cupertino_icons</code> MIT notice.</td></tr>
+<tr><td><code>shaders/ink_sparkle.frag</code>, <code>shaders/stretch_effect.frag</code>, <code>packages/material_ui/shaders/ink_sparkle.frag</code></td><td>GLSL shaders</td><td><strong>BSD-3-Clause</strong> (The Flutter Authors)</td><td>Covered by Flutter SDK / <code>material_ui</code> BSD-3-Clause notices.</td></tr>
+<tr><td><code>libsqlite3.so</code></td><td><code>arm64-v8a</code>, <code>armeabi-v7a</code>, <code>x86_64</code></td><td><strong>Public Domain</strong> (SQLite C <code>3.50.2</code>) + MIT (<code>sqlite3</code> Dart wrapper)</td><td>Notice included in <code>NOTICES.Z</code>.</td></tr>
+<tr><td><code>libdartjni.so</code></td><td><code>arm64-v8a</code>, <code>armeabi-v7a</code>, <code>x86_64</code>, <code>x86</code></td><td><strong>BSD-3-Clause</strong> (Dart project authors — <code>jni</code> / <code>jni_flutter</code>)</td><td>Covered by <code>jni</code> / <code>jni_flutter</code> notices.</td></tr>
+<tr><td><code>libapp.so</code>, <code>libflutter.so</code></td><td><code>arm64-v8a</code>, <code>armeabi-v7a</code>, <code>x86_64</code></td><td>App code proprietary (Abid Ali); Flutter Engine / Dart VM multi-license (<code>sky_engine</code> -&gt; <code>NOTICES.Z</code>)</td><td>Expose <code>NOTICES.Z</code> via <code>showLicensePage</code> or bundled screen.</td></tr>
+<tr><td><strong>Receipt Vault Brand &amp; Launcher Assets</strong></td><td>Android <code>mipmap-*</code> / <code>drawable/*</code> &amp; iOS <code>AppIcon</code></td><td><strong>Original Artwork</strong> (Abid Ali / Xaviron Labs)</td><td>Replaced placeholder Flutter logos with original Receipt Vault symbol artwork.</td></tr>
 </tbody></table></div>
-
-<h2>7. Bundled Fonts, Icons, Shaders &amp; Native Shared Libraries</h2>
-<p>Third-party assets, icon fonts, shaders, and native binaries included in Receipt Vault Android builds:</p>
-<div class="table-wrap"><table><thead>
-<tr><th>Component / Asset</th><th>Format / ABIs</th><th>Licence</th><th>Attribution / Scope Notice</th></tr>
-</thead><tbody>
-<tr><td><code>fonts/MaterialIcons-Regular.otf</code></td><td>Font asset (Material Design Icons)</td><td><strong>Creative Commons Attribution 4.0 International (CC BY 4.0)</strong></td><td>Google LLC / Material Design Authors. Attribution, warranty disclaimer, and licence link provided in Section 8.6.</td></tr>
-<tr><td><code>packages/cupertino_icons/assets/CupertinoIcons.ttf</code></td><td>Font asset</td><td><strong>MIT License</strong> (Copyright (c) 2016 Vladimir Kharlampidi)</td><td>Covered by <code>cupertino_icons</code> MIT notice (Section 8.2).</td></tr>
-<tr><td><code>shaders/ink_sparkle.frag</code>, <code>shaders/stretch_effect.frag</code>, <code>packages/material_ui/shaders/ink_sparkle.frag</code></td><td>GLSL shaders</td><td><strong>BSD-3-Clause</strong> (The Flutter Authors)</td><td>Covered by Flutter SDK / <code>material_ui</code> BSD-3-Clause notices (Section 8.3).</td></tr>
-<tr><td><code>libsqlite3.so</code></td><td><code>arm64-v8a</code>, <code>armeabi-v7a</code>, <code>x86_64</code></td><td><strong>Public Domain</strong> (SQLite C <code>3.50.2</code>) + MIT (<code>sqlite3</code> Dart wrapper)</td><td>Public Domain dedication reproduced in Section 8.1 and bundled in <code>NOTICES.Z</code>.</td></tr>
-<tr><td><code>libdartjni.so</code></td><td><code>arm64-v8a</code>, <code>armeabi-v7a</code>, <code>x86_64</code>, <code>x86</code></td><td><strong>BSD-3-Clause</strong> (Dart project authors — <code>jni</code> / <code>jni_flutter</code>)</td><td>Covered by <code>jni</code> / <code>jni_flutter</code> BSD-3-Clause notices (Section 8.3).</td></tr>
-<tr><td><code>libapp.so</code>, <code>libflutter.so</code></td><td><code>arm64-v8a</code>, <code>armeabi-v7a</code>, <code>x86_64</code></td><td>Application code proprietary (Abid Ali / Xaviron Labs); Flutter Engine multi-license (<code>sky_engine</code>)</td><td>Complete Flutter Engine &amp; C/C++ notices bundled in <code>NOTICES.Z</code> and viewable in-app.</td></tr>
-<tr><td>Pre-release Default Launcher Icon Assets (<code>ic_launcher.png</code>, <code>AppIcon</code>)</td><td>Launcher bitmap assets</td><td><strong>Third-Party Artwork</strong> (Google LLC / The Flutter Authors)</td><td>Default Flutter SDK placeholder icons present in development builds; proprietary trademarks of Google LLC / The Flutter Authors and not claimed as Xaviron Labs artwork.</td></tr>
-</tbody></table></div>
-
-<h2>8. Verified Licence Texts &amp; Mandatory Attribution Notices</h2>
-
-<h3>8.1 SQLite Core Library (Public Domain Dedication)</h3>
+<h2>7. Representative Verified License Texts &amp; Mandatory Notices</h2>
+<h3>7.1 SQLite Core Library (Public Domain Dedication — from <code>NOTICES.Z</code>)</h3>
 <pre>
 The source code for SQLite is in the public domain. No claim of
 copyright is made on any part of the core source code. (The
@@ -302,9 +271,8 @@ specifically disavowing any copyright interest in the code. This means
 that anybody is able to legally do anything they want with the SQLite
 source code.
 </pre>
-
-<h3>8.2 MIT License (Representative Text — <code>archive</code>, <code>drift</code>, <code>flutter_riverpod</code>, <code>sqlite3</code>, <code>cupertino_icons</code>)</h3>
-<p><em>Each MIT-licensed package retains its specific copyright year and holder notice listed in Sections 2–4 above.</em></p>
+<h3>7.2 MIT License (Representative Text — e.g., <code>archive</code>, <code>drift</code>, <code>flutter_riverpod</code>, <code>sqlite3</code>, <code>cupertino_icons</code>)</h3>
+<p><em>Each MIT-licensed package carries its own copyright year/holder line listed in Sections 2–4 above.</em></p>
 <pre>
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -324,9 +292,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 </pre>
-
-<h3>8.3 BSD-3-Clause License (Representative Text — <code>flutter</code>, <code>go_router</code>, <code>path_provider</code>, <code>flutter_local_notifications</code>, <code>image_picker</code>, <code>desugar_jdk_libs_configuration</code>)</h3>
-<p><em>Each BSD-3-Clause component retains its specific copyright holder line listed in Sections 2–6 above.</em></p>
+<h3>7.3 BSD-3-Clause License (Representative Text — e.g., <code>flutter</code>, <code>go_router</code>, <code>path_provider</code>, <code>flutter_local_notifications</code>, <code>image_picker</code>, <code>desugar_jdk_libs_configuration</code>)</h3>
+<p><em>Each BSD-3-Clause package retains its specific copyright holder line listed in Sections 2–5 above.</em></p>
 <pre>
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -352,8 +319,7 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-
-<h3>8.4 BSD-2-Clause License (Representative Text — <code>timezone</code>, <code>recase</code>)</h3>
+<h3>7.4 BSD-2-Clause License (Representative Text — e.g., <code>timezone</code>, <code>recase</code>)</h3>
 <pre>
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -376,21 +342,10 @@ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-
-<h3>8.5 Apache License, Version 2.0 (Complete Verbatim Text &amp; Mandatory NOTICE)</h3>
-<p>Applies to <code>flutter_timezone</code>, <code>material_color_utilities</code>, <code>clock</code>, <code>image_picker</code> <code>aFileChooser</code> components, <code>androidx.*</code> Jetpack libraries, <code>kotlin-stdlib</code>, <code>kotlinx-coroutines-*</code>, <code>org.jetbrains:annotations</code>, <code>com.getkeepsafe.relinker:relinker</code>, <code>com.google.guava:listenablefuture</code>, <code>com.google.code.gson:gson</code>, <code>error_prone_annotations</code>, <code>org.jspecify:jspecify</code>, and Gradle build tooling (Section 6).</p>
+<h3>7.5 Apache License, Version 2.0 (Applied to <code>flutter_timezone</code>, <code>material_color_utilities</code>, <code>clock</code>, <code>image_picker</code> <code>aFileChooser</code>, <code>androidx.*</code>, <code>kotlin-stdlib</code>, <code>kotlinx-coroutines</code>, <code>annotations</code>, <code>relinker</code>, <code>gson</code>, <code>listenablefuture</code>, <code>jspecify</code>, <code>error_prone_annotations</code>)</h3>
+<p>Licensed under the Apache License, Version 2.0 (January 2004). Official URI: <code><a href="http://www.apache.org/licenses/LICENSE-2.0" rel="noopener noreferrer">http://www.apache.org/licenses/LICENSE-2.0</a></code>. Complete text reproduced below:</p>
 <pre>
-=========================================================================
-   ==  NOTICE file corresponding to the section 4 d of                    ==
-   ==  the Apache License, Version 2.0,                                   ==
-   ==  in this case for the Kotlin Compiler distribution.                 ==
-   =========================================================================
-
-   Kotlin Compiler
-   Copyright 2010-2024 JetBrains s.r.o and respective authors and developers
-</pre>
-<pre>
-Apache License
+                                 Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
@@ -566,41 +521,10 @@ Apache License
       of your accepting any such warranty or additional liability.
 
    END OF TERMS AND CONDITIONS
-
-   APPENDIX: How to apply the Apache License to your work.
-
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets &quot;[]&quot;
-      replaced with your own identifying information. (Don&#x27;t include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same &quot;printed page&quot; as the copyright notice for easier
-      identification within third-party archives.
-
-   Copyright [yyyy] [name of copyright owner]
-
-   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
 </pre>
-
-<h3>8.6 Creative Commons Attribution 4.0 International — Material Icons Font (<code>MaterialIcons-Regular.otf</code>)</h3>
-<p><strong>Creator / Licensor Attribution:</strong> Material Design Icons font (<code>MaterialIcons-Regular.otf</code>) by <strong>Google LLC</strong>, redistributed unmodified as part of Receipt Vault under the <strong>Creative Commons Attribution 4.0 International Public License (CC BY 4.0)</strong>.</p>
-<ul>
-<li><strong>Licence URI &amp; Legal Code:</strong> <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer">https://creativecommons.org/licenses/by/4.0/</a> (<a href="https://creativecommons.org/licenses/by/4.0/legalcode" rel="noopener noreferrer">full legal code</a>).</li>
-<li><strong>Warranty Disclaimer Notice (CC BY 4.0 Section 5):</strong> The Material Icons font is licensed "AS-IS" and "AS-AVAILABLE", and Google LLC / Licensor makes no representations or warranties of any kind concerning the licensed material, whether express, implied, statutory, or other.</li>
-</ul>
-
-<h3>8.7 <code>com.android.tools:desugar_jdk_libs:2.1.4</code> — GNU GPL v2 with "Classpath" Exception (Verbatim Text)</h3>
+<h3>7.6 Creative Commons Attribution 4.0 International (<code>MaterialIcons-Regular.otf</code>)</h3>
+<p>Verified in <code>Flutter SDK material_fonts/materialicons_license.txt</code>. Under Section 3(a), sharing/distributing the font asset requires retaining creator/licensor identification, copyright/public-license notices, warranty disclaimer notices, and either the license text or URI (<code><a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener noreferrer">https://creativecommons.org/licenses/by/4.0/</a></code>), plus indicating if modified.</p>
+<h3>7.7 <code>com.android.tools:desugar_jdk_libs:2.1.4</code> — GNU GPL v2 with &quot;Classpath&quot; Exception (Verbatim Text)</h3>
 <p>Upstream declaration: <code><a href="https://github.com/google/desugar_jdk_libs/blob/master/LICENSE" rel="noopener noreferrer">https://github.com/google/desugar_jdk_libs/blob/master/LICENSE</a></code>. Reproduced verbatim below:</p>
 <pre>
 The GNU General Public License (GPL)
@@ -951,45 +875,9 @@ exception as provided by Oracle in the LICENSE file that accompanied this code.&
     the library, but you are not obligated to do so.  If you do not wish to do
     so, delete this exception statement from your version.
 </pre>
-
-<h3>8.8 <code>archive</code> Multi-Licence Attributions &amp; <code>vector_math</code> Zlib Notice</h3>
-<p><code>vector_math</code> (<code>2.2.0</code>) carries an additional Zlib attribution notice (<code>Copyright (C) 2011 Andrew Magill</code>). Derived third-party codec notices included with <code>archive</code> (<code>4.7.1</code>):</p>
+<h3>7.8 <code>archive</code> Multi-License Attribution (<code>LICENSE-other.md</code>) &amp; <code>vector_math</code> Zlib Notice</h3>
+<p>Full verbatim derived codec notices from <code>archive-4.7.1/LICENSE-other.md</code> (<code>bzip2 1.0.6</code>, <code>zlib-ng</code> Zlib License, <code>JZLib</code>, <code>Zstandard</code>, and <code>zlib.js</code> — omitted by Flutter's <code>NOTICES.Z</code> and bundled inside in-app <code>OpenSourceLicenseRegistry</code>):</p>
 <pre>
-Some code has been derived from the following projects:
-
-zlib/inflate:
-JavaScript Zlib Library, https://github.com/imaya/zlib.js
-The MIT License
-Copyright (c) 2012 imaya
-
-zlib/deflate:
-Java JZLib Library, http://www.jcraft.com/jzlib/
-Copyright (c) 2000-2011 ymnk, JCraft,Inc. All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-    1. Redistributions of source code must retain the above copyright notice,
-       this list of conditions and the following disclaimer.
-  
-    2. Redistributions in binary form must reproduce the above copyright 
-       notice, this list of conditions and the following disclaimer in 
-       the documentation and/or other materials provided with the distribution.
-  
-    3. The names of the authors may not be used to endorse or promote products
-       derived from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED ``AS IS&#x27;&#x27; AND ANY EXPRESSED OR IMPLIED WARRANTIES,
-INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
-FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL JCRAFT,
-INC. OR ANY CONTRIBUTORS TO THIS SOFTWARE BE LIABLE FOR ANY DIRECT, INDIRECT,
-INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
-OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
-EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 bzip2:
 This program, &quot;bzip2&quot;, the associated library &quot;libbzip2&quot;, and all
 documentation, are copyright (C) 1996-2010 Julian R Seward.  All
@@ -1041,7 +929,7 @@ Permission is granted to anyone to use this software for any purpose,
 including commercial applications, and to alter it and redistribute it
 freely, subject to the following restrictions:
 
-1. The origin of this software must not be misrepresented; you must not
+1. The origin of this software must not be misrepresented; you must
    claim that you wrote the original software. If you use this software
    in a product, an acknowledgment in the product documentation would be
    appreciated but is not required.
@@ -1050,37 +938,13 @@ freely, subject to the following restrictions:
    misrepresented as being the original software.
 
 3. This notice may not be removed or altered from any source distribution.
-
-zstd and xxh64:
-Zstandard 1.5.7, https://github.com/facebook/zstd, including lib/common/xxhash.h
-Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met:
-
- * Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
-
- * Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
-
- * Neither the name Facebook, nor Meta, nor the names of its contributors may
-   be used to endorse or promote products derived from this software without
-   specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
-ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
-ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
-ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
-<p><em>Note: For the complete Flutter Engine (<code>sky_engine</code>: Skia, Impeller, ANGLE, ICU, BoringSSL, FreeType, libpng, libjpeg-turbo, Vulkan headers, etc.) multi-license notices (<code>1,645</code> sections), view Open Source Licences directly inside Receipt Vault under Settings &rarr; About &amp; Legal.</em></p>
+<ul>
+<li><code>archive</code> (<code>4.7.1</code>) also includes notices for <code>zlib.js</code> (MIT, Copyright (c) 2012 imaya), <code>JZLib</code> (BSD-3-Clause, Copyright (c) 2000-2011 ymnk, JCraft,Inc.), and <code>Zstandard / xxhash</code> (BSD-3-Clause, Copyright (c) Meta Platforms, Inc.).</li>
+<li><code>vector_math</code> (<code>2.2.0</code>) carries an additional Zlib attribution notice (<code>Copyright (C) 2011 Andrew Magill</code>) in its <code>LICENSE</code> file.</li>
+</ul>
+<p><em>Note: For the complete Flutter Engine (<code>sky_engine</code>: Skia, Impeller, ANGLE, ICU, BoringSSL, FreeType, libpng, libjpeg-turbo, Vulkan headers, etc.) multi-license notices (<code>1,648</code> sections), consult <code>NOTICES.Z</code> in the release build or Flutter's <code>LicenseRegistry</code> via the in-app <code>showLicensePage</code> screen.</em></p>
+
     </article>
   </main>
 

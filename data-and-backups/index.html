@@ -37,20 +37,6 @@
   <main id="main-content" class="main-container">
     <article class="doc-card">
       <h1>Data &amp; Backup Information — Receipt Vault</h1>
-      <div class="meta-box">
-        <dl>
-          <dt>Application</dt>
-          <dd>Receipt Vault (<code>1.0.0+1</code>)</dd>
-          <dt>Developer Brand / Owner</dt>
-          <dd>Xaviron Labs — Abid Ali (Individual Developer — Google Play Trader)</dd>
-          <dt>Support Email</dt>
-          <dd><a href="mailto:abidali691069@gmail.com">abidali691069@gmail.com</a></dd>
-          <dt>Effective Date</dt>
-          <dd data-legal-date="effective">Pending initial release</dd>
-          <dt>Last Updated</dt>
-          <dd data-legal-date="updated">Pending initial release</dd>
-        </dl>
-      </div>
       <p>Because Receipt Vault operates entirely on your device without a developer cloud server, please review these important facts about backups, restores, exports, and reminders.</p>
 
       <h2>1. Local-Only Storage &amp; Independent Copies</h2>
@@ -81,10 +67,13 @@
       <h2>5. Warranty Tracking &amp; Notification Delivery Limits</h2>
       <ul>
         <li><strong>Informational Only:</strong> Warranty tracking and countdowns are based strictly on entered dates and do not guarantee a valid warranty claim with any merchant or manufacturer.</li>
-        <li><strong>Android Settings Impact:</strong> Local reminder delivery uses battery-friendly OS scheduling (<code>inexactAllowWhileIdle</code>) and may be delayed or prevented by Android Doze mode, manufacturer battery savers, revoked permissions, or device clock/timezone changes.</li>
+        <li><strong>Android Settings &amp; Lock-Screen Privacy:</strong> Local reminder delivery uses battery-friendly OS scheduling (<code>inexactAllowWhileIdle</code>) with <code>NotificationVisibility.private</code> on Android, and may be delayed or prevented by Android Doze mode, manufacturer battery savers, revoked permissions, or device clock/timezone changes.</li>
       </ul>
 
-      <h2>6. Support</h2>
+      <h2>6. Android OS Backup Disabled by App Configuration</h2>
+      <p>Receipt Vault sets <code>android:allowBackup=&quot;false&quot;</code> along with <code>backup_rules.xml</code> (<code>android:fullBackupContent</code>) and <code>data_extraction_rules.xml</code> (<code>android:dataExtractionRules</code> disabling cloud backup and device-to-device transfer) in its Android manifest so unencrypted app files (<code>receipt_vault.sqlite</code>, <code>receipt_images/</code>, and <code>app_settings.json</code>) are excluded from Android OS cloud backup and device transfers. Keep manual <code>.rvbackup</code> archives in a trusted location before changing devices, uninstalling the app, or clearing app storage.</p>
+
+      <h2>7. Support</h2>
       <p>Questions about backup validation or restoring records? Email <a href="mailto:abidali691069@gmail.com">abidali691069@gmail.com</a> (Abid Ali / Xaviron Labs).</p>
     </article>
   </main>
